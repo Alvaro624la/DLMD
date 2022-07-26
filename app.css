@@ -8,26 +8,26 @@
   background-color: rgb(240, 213, 0);
 }
 
-.main {
+.life {
   display: grid;
   grid-template: 1fr/0.5fr 1fr;
   place-items: center;
-  width: 100vw;
-  height: 100vh;
+  height: 80vh;
 }
-.main__personCont {
+.life__personCont {
   display: grid;
   justify-content: end;
 }
-.main__personCont__img {
-  width: 15em;
+.life__personCont__img {
+  width: 20em;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
 }
-.main__necessitiesCont {
+.life__necessitiesCont {
   display: flex;
   flex-direction: column;
-  width: 40em;
+  width: 34em;
 }
-.main__necessitiesCont__foodCont {
+.life__necessitiesCont__foodCont {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -36,12 +36,14 @@
   box-shadow: 5px 5px 15px 1px #000;
   padding: 1.5em;
   margin-bottom: 2em;
+  height: 8em;
 }
-.main__necessitiesCont__foodCont__img {
+.life__necessitiesCont__foodCont__img {
   padding-right: 0.5em;
   width: 6em;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
 }
-.main__necessitiesCont__waterCont {
+.life__necessitiesCont__waterCont {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -50,12 +52,14 @@
   box-shadow: 5px 5px 15px 1px #000;
   padding: 1.5em;
   margin-bottom: 2em;
+  height: 8em;
 }
-.main__necessitiesCont__waterCont__img {
+.life__necessitiesCont__waterCont__img {
   padding-right: 0.5em;
   width: 6em;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
 }
-.main__necessitiesCont__energyCont {
+.life__necessitiesCont__energyCont {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -64,10 +68,34 @@
   box-shadow: 5px 5px 15px 1px #000;
   padding: 1.5em;
   margin-bottom: 2em;
+  height: 8em;
 }
-.main__necessitiesCont__energyCont__img {
+.life__necessitiesCont__energyCont__img {
   padding-right: 0.5em;
   width: 6em;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
+}
+
+.inventory {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.inventory__item {
+  width: 8em;
+  margin: 0 4em;
+  filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.6));
+}
+.inventory__item:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(15px 15px 12px rgba(0, 0, 0, 0.6));
+}
+.inventory__item:active {
+  transform: scale(0.95);
+  filter: drop-shadow(7px 3px 8px rgba(0, 0, 0, 0.6));
 }
 
 /*# sourceMappingURL=app.css.map */
