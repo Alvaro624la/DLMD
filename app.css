@@ -1,101 +1,155 @@
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 .body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.main {
   background-color: rgb(240, 213, 0);
+  width: 100%;
+  height: 100%;
+  display: grid;
 }
 
 .life {
-  display: grid;
-  grid-template: 1fr/0.5fr 1fr;
-  place-items: center;
-  height: 80vh;
-}
-.life__personCont {
-  display: grid;
-  justify-content: end;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3em;
 }
 .life__personCont__img {
-  width: 20em;
+  width: 10em;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
-}
-.life__necessitiesCont {
-  display: flex;
-  flex-direction: column;
-  width: 34em;
 }
 .life__necessitiesCont__foodCont {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10em;
   box-shadow: 5px 5px 15px 1px #000;
   padding: 1.5em;
   margin-bottom: 2em;
-  height: 8em;
+  width: 15em;
+  height: 2em;
 }
 .life__necessitiesCont__foodCont__img {
-  padding-right: 0.5em;
-  width: 6em;
+  width: 3em;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
 }
 .life__necessitiesCont__waterCont {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10em;
   box-shadow: 5px 5px 15px 1px #000;
   padding: 1.5em;
   margin-bottom: 2em;
-  height: 8em;
+  width: 15em;
+  height: 2em;
 }
 .life__necessitiesCont__waterCont__img {
-  padding-right: 0.5em;
-  width: 6em;
+  width: 3em;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
 }
 .life__necessitiesCont__energyCont {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10em;
   box-shadow: 5px 5px 15px 1px #000;
   padding: 1.5em;
   margin-bottom: 2em;
-  height: 8em;
+  width: 15em;
+  height: 2em;
 }
 .life__necessitiesCont__energyCont__img {
-  padding-right: 0.5em;
-  width: 6em;
+  width: 3em;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
 }
 
 .inventory {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em 0em;
+}
+.inventory__itemsCont {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 20vh;
-  background-color: rgba(0, 0, 0, 0.1);
 }
-.inventory__item {
-  width: 8em;
-  margin: 0 4em;
+.inventory__itemsCont__item {
+  min-width: 3.5em;
+  max-width: 3.5em;
+  padding: 0 1.75em;
   filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.6));
+  cursor: pointer;
 }
-.inventory__item:hover {
+.inventory__itemsCont__item:hover {
   transform: scale(1.1);
   filter: drop-shadow(15px 15px 12px rgba(0, 0, 0, 0.6));
 }
-.inventory__item:active {
+.inventory__itemsCont__item:active {
   transform: scale(0.95);
   filter: drop-shadow(7px 3px 8px rgba(0, 0, 0, 0.6));
+}
+
+@media (max-width: 390px) {
+  .life {
+    padding: 1em;
+  }
+  .life__personCont__img {
+    width: 10em;
+  }
+  .life__necessitiesCont__foodCont {
+    width: 10em;
+    height: 1em;
+  }
+  .life__necessitiesCont__foodCont__img {
+    width: 2em;
+  }
+  .life__necessitiesCont__waterCont {
+    width: 10em;
+    height: 1em;
+  }
+  .life__necessitiesCont__waterCont__img {
+    width: 2em;
+  }
+  .life__necessitiesCont__energyCont {
+    width: 10em;
+    height: 1em;
+  }
+  .life__necessitiesCont__energyCont__img {
+    width: 2em;
+  }
+  .inventory__itemsCont__item {
+    min-width: 2em;
+    max-width: 2em;
+  }
+}
+@media (min-width: 1100px) {
+  .life__personCont__img {
+    width: 20em;
+  }
+  .inventory__itemsCont__item {
+    min-width: 4em;
+    max-width: 4em;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

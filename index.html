@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alvaro de Prado">
+    <meta name="description" content="A game...">
+    <link rel="author" href="https://www.linkedin.com/in/%C3%A1lvaro-de-prado-calle-740062221/">
     <link href="app.css" type="text/css" rel="stylesheet">
     <title>DLMD - Don't Let Me Die</title>
 </head>
 <body id="body" class="body">
     <main id="main" class="main">
-        <article id="life" class="life"></article>
-        <article id="inventory" class="inventory"></article>
+        <article id="life" class="life">
+            <div id="personCont" class="life__personCont">
+                <img id="personState" class="life__personCont__img" alt="person-state-img"></img>
+            </div>
+            <div id="necessitiesCont" class="life__necessitiesCont">
+                <div id="foodCont" class="life__necessitiesCont__foodCont"></div>
+                <div id="waterCont" class="life__necessitiesCont__waterCont"></div>
+                <div id="energyCont" class="life__necessitiesCont__energyCont"></div>
+            </div>
+        </article>
+        <article id="inventory" class="inventory">
+            <div id="itemsCont" class="inventory__itemsCont"></div>
+        </article>
     </main>
     <script src="app.js"></script>
 </body>

@@ -1,47 +1,60 @@
 *{
-    box-sizing: border-box;
+    // box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 .body{
+    // background-color: rgba(255, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+}
+.main{
     background-color: rgb(240,213,0);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    // align-items: center;
+    // justify-content: space-around;
+    // grid-template-rows: 1fr 1fr;
+    // grid-template-columns: 1fr;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-around;
 }
 .life{
-    display: grid;
-    grid-template: 1fr / .5fr 1fr;
-    place-items: center;
-    // width: 100vw;
-    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3em;
 
     &__personCont{
-        display: grid;
-        justify-content: end;
-    
+
         &__img{
-            width: 20em;
+            width: 10em;
             filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .8));
         }
     }
     &__necessitiesCont{
-        // border: 1px solid red;
-        display: flex;
-        flex-direction: column;
-        width: 34em;
+        // display: flex;
+        // flex-direction: column;
 
         &__foodCont{
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            align-items: center;
             background-color: rgba(0, 0, 0, 0.1);
             border-radius: 10em;
             box-shadow: 5px 5px 15px 1px #000;
             padding: 1.5em;
             margin-bottom: 2em;
-            height: 8em;
+            width: 15em;
+            height: 2em;
 
             &__img{
-                padding-right: .5em;
-                width: 6em;
+                width: 3em;
                 filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .8));
             }
         }
@@ -49,16 +62,17 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            align-items: center;
             background-color: rgba(0, 0, 0, 0.1);
             border-radius: 10em;
             box-shadow: 5px 5px 15px 1px #000;
             padding: 1.5em;
             margin-bottom: 2em;
-            height: 8em;
+            width: 15em;
+            height: 2em;
 
             &__img{
-                padding-right: .5em;
-                width: 6em;
+                width: 3em;
                 filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .8));
             }
         }
@@ -66,42 +80,122 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            align-items: center;
             background-color: rgba(0, 0, 0, 0.1);
             border-radius: 10em;
             box-shadow: 5px 5px 15px 1px #000;
             padding: 1.5em;
             margin-bottom: 2em;
-            height: 8em;
+            width: 15em;
+            height: 2em;
 
             &__img{
-                padding-right: .5em;
-                width: 6em;
+                width: 3em;
                 filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .8));
             }
         }
     }
 }
 .inventory{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    // width: 100vw;
-    height: 20vh;
     background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em 0em;
 
-    &__item{
-        width: 8em;
-        margin: 0 4em;
+    &__itemsCont{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        &__item{
+        min-width: 3.5em;
+        max-width: 3.5em;
+        padding: 0 1.75em;
         filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.6));
+        cursor: pointer;
 
-        &:hover{
-            transform: scale(1.1);
-            filter: drop-shadow(15px 15px 12px rgba(0, 0, 0, 0.6));
+            &:hover{
+                transform: scale(1.1);
+                filter: drop-shadow(15px 15px 12px rgba(0, 0, 0, 0.6));
+            }
+            &:active{
+                transform: scale(.95);
+                filter: drop-shadow(7px 3px 8px rgba(0, 0, 0, 0.6));
+            }
         }
-        &:active{
-            transform: scale(.95);
-            filter: drop-shadow(7px 3px 8px rgba(0, 0, 0, 0.6));
+    }    
+}
+@media (max-width: 390px) {
+    .life{
+        padding: 1em;
+    
+        &__personCont{
+    
+            &__img{
+                width: 10em;
+            }
         }
+        &__necessitiesCont{
+    
+            &__foodCont{
+                width: 10em;
+                height: 1em;
+    
+                &__img{
+                    width: 2em;
+                }
+            }
+            &__waterCont{
+                width: 10em;
+                height: 1em;
+    
+                &__img{
+                    width: 2em;
+                }
+            }
+            &__energyCont{
+                width: 10em;
+                height: 1em;
+    
+                &__img{
+                    width: 2em;
+                }
+            }
+        }
+    }
+    .inventory{
+    
+        &__itemsCont{
+    
+            &__item{
+            min-width: 2em;
+            max-width: 2em;
+            }
+        }    
+    }
+}
+
+@media (min-width: 1100px) {
+    .life{
+  
+        &__personCont{
+    
+            &__img{
+                width: 20em;
+            }
+        }
+    }
+    .inventory{
+    
+        &__itemsCont{
+    
+            &__item{
+            min-width: 4em;
+            max-width: 4em;
+            }
+        }    
     }
 }
