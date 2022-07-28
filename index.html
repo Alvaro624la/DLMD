@@ -7,11 +7,26 @@
     <meta name="author" content="Alvaro de Prado">
     <meta name="description" content="A game...">
     <link rel="author" href="https://www.linkedin.com/in/%C3%A1lvaro-de-prado-calle-740062221/">
+    <!--GOOGLE FONTS ( font-family: 'Modak', cursive; )-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+
     <link href="app.css" type="text/css" rel="stylesheet">
     <title>DLMD - Don't Let Me Die</title>
 </head>
 <body id="body" class="body">
     <main id="main" class="main">
+        <div id="levelCont" class="levelCont">
+            <p id="levelIndicator" class="levelCont__p">LEVEL
+            </p>
+            <p id="levelIndicatorJS" class="levelCont__number"></p>
+        </div>
+        <div id="highscoreCont" class="highscoreCont">
+            <p id="highscoreContP" class="highscoreCont__p">Highscore 
+                <span id="highscoreContPNumber" class="highscoreCont__p__number"></span>
+            </p>
+        </div>
         <article id="life" class="life">
             <div id="personCont" class="life__personCont">
                 <img id="personState" class="life__personCont__img" alt="person-state-img"></img>
