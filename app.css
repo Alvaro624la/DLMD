@@ -61,10 +61,47 @@
   justify-content: space-around;
   align-items: center;
   padding: 3em;
+  margin-bottom: 2em;
+}
+.life__personCont {
+  position: relative;
 }
 .life__personCont__img {
   width: 10em;
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
+}
+.life__personCont__tooltipYES {
+  z-index: 999;
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Modak", cursive, Helvetica, Arial;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid rgb(240, 213, 0);
+  border-radius: 0em 1em 1em 1em;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8));
+  padding: 0.5em;
+  width: 90px;
+}
+.life__personCont__tooltipYES__state > span, .life__personCont__tooltipYES__food > span, .life__personCont__tooltipYES__water > span, .life__personCont__tooltipYES__energy > span {
+  color: rgb(80, 60, 60);
+}
+.life__personCont__tooltipYES::after {
+  content: "";
+  border-left: rgb(240, 213, 0) 30px solid;
+  border-bottom: transparent 30px solid;
+  transform: rotate(315deg);
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  right: 95px;
+  top: 0;
+}
+.life__personCont__tooltipNO {
+  display: none;
 }
 .life__necessitiesCont__foodCont {
   display: flex;
@@ -146,28 +183,31 @@
 
 @media (max-width: 390px) {
   .life {
-    padding: 1em;
+    padding: 2em;
   }
   .life__personCont__img {
-    width: 10em;
+    width: 9em;
   }
   .life__necessitiesCont__foodCont {
     width: 10em;
-    height: 1em;
+    height: 0.6em;
+    margin-bottom: 1em;
   }
   .life__necessitiesCont__foodCont__img {
     width: 2em;
   }
   .life__necessitiesCont__waterCont {
     width: 10em;
-    height: 1em;
+    height: 0.6em;
+    margin-bottom: 1em;
   }
   .life__necessitiesCont__waterCont__img {
     width: 2em;
   }
   .life__necessitiesCont__energyCont {
     width: 10em;
-    height: 1em;
+    height: 0.6em;
+    margin-bottom: 1em;
   }
   .life__necessitiesCont__energyCont__img {
     width: 2em;
