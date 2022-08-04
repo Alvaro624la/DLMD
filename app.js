@@ -115,9 +115,9 @@ function emojiTooltipYES(){
     let recorte2 = recorte1.substring(6).replace('.svg', '');
     let recorte3 = recorte2.charAt(0).toUpperCase() + recorte2.slice(1);
     stateTooltip.innerHTML = `State: <span>${recorte3}</span>`;
-    foodTooltip.innerHTML = `Food: <span>${foodArr.length}</span>`;
-    waterTooltip.innerHTML = `Water: <span>${waterArr.length}</span>`;
-    energyTooltip.innerHTML = `Energy: <span>${energyArr.length}</span>`;
+    foodTooltip.innerHTML = `Food: <span>${foodArr.length}</span>/5`;
+    waterTooltip.innerHTML = `Water: <span>${waterArr.length}</span>/5`;
+    energyTooltip.innerHTML = `Energy: <span>${energyArr.length}</span>/5`;
 };
 function emojiTooltipNO(){
     personContTooltip.className = 'life__personCont__tooltipNO';
@@ -327,4 +327,4 @@ highscoreScoreboard.innerHTML = highcoreNum;
 // allInArr.sort(()=>{return Math.random() - 0.5});
 // allInArr.pop();
 // console.log(allInArr);
-//
+
